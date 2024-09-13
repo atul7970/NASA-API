@@ -1,7 +1,9 @@
 const launches = new Map();
 
 let latestFLightNumber= 100;
-
+function existsLaunchWithId(launchId){
+    return launches.has(launchId);
+}
 const launch ={
     flightNumber:100, 
     mission:'Keppler Exploration X',
@@ -14,6 +16,7 @@ const launch ={
 };  
 
 launches.set(launch.flightNumber , launch);
+
 
 function getAllLaunches(){
     return Array.from(launches.values());
@@ -29,8 +32,17 @@ function addNewLaunch(launch){
     })
 );
 }
+function abortLaunchById(launchId){
+ const aborted=launches.get(launchId);
+ aborted.upcoming=false;
+ aborted.success=false;
+ return aborted;
+}
+
 
 module.exports={
+    existsLaunchWithId,
     getAllLaunches,
     addNewLaunch,
+    abortLaunchById,
 }
