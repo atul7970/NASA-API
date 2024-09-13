@@ -1,0 +1,29 @@
+{
+  "name": "nasa-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install-server": "npm install --prefix server",
+    "install-client": "npm install --prefix client",
+    "install": "npm run install-server && npm run install-client",
+    "client": "npm start --prefix client",
+    "server": "npm run watch --prefix server",
+    "watch": "concurrently \"npm run server\" \"npm run client\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atul7970/NASA-API.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/atul7970/NASA-API/issues"
+  },
+  "homepage": "https://github.com/atul7970/NASA-API#readme",
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
+}
