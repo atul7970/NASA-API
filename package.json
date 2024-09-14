@@ -11,6 +11,7 @@
     "server": "npm run watch --prefix server",
     "watch": "concurrently \"npm run server\" \"npm run client\"",
     "deploy": "npm run build --prefix client && npm start --prefix server",
+    "deploy-cluster": "npm run build --prefix client && npm run cluster --prefix server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -28,6 +29,7 @@
     "concurrently": "^9.0.1"
   },
   "dependencies": {
+    "mongoose": "^8.6.2",
     "morgan": "^1.10.0"
   }
 }

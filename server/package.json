@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest",
     "start": " node src/server.js",
-    "watch": "nodemon src/server.js"
+    "watch": "nodemon src/server.js",
+    "cluster":"pm2 start src/server.js -i max"
   },
   "author": "Atul Kumar",
   "license": "ISC",
@@ -14,7 +15,8 @@
     "cors": "^2.8.5",
     "csv-parse": "^5.5.6",
     "express": "^4.21.0",
-    "nodemon": "^3.1.4"
+    "nodemon": "^3.1.4",
+    "pm2": "^5.4.2"
   },
   "devDependencies": {
     "jest": "^29.7.0",
