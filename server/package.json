@@ -7,13 +7,15 @@
     "test": "jest",
     "start": " node src/server.js",
     "watch": "nodemon src/server.js",
-    "cluster":"pm2 start src/server.js -i max"
+    "cluster": "pm2 start src/server.js -i max"
   },
   "author": "Atul Kumar",
   "license": "ISC",
   "dependencies": {
+    "axios": "^1.7.7",
     "cors": "^2.8.5",
     "csv-parse": "^5.5.6",
+    "dotenv": "^16.4.5",
     "express": "^4.21.0",
     "nodemon": "^3.1.4",
     "pm2": "^5.4.2"
