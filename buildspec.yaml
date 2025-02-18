@@ -6,7 +6,7 @@ phases:
       - npm install
   build:
     commands:
-      - npm run deploy
+      - npm run build
   post_build:
     commands:
       - echo Build completed on `date`
@@ -14,5 +14,5 @@ phases:
 artifacts:
   files:
     - '**/*'
-  base-directory: server/build
+  base-directory: server
   discard-paths: no
