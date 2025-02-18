@@ -1,18 +1,1 @@
-version: 0.2
-
-phases:
-  pre_build:
-    commands:
-      - npm install
-  build:
-    commands:
-      - npm run watch
-  post_build:
-    commands:
-      - echo Build completed on `date`
-
-artifacts:
-  files:
-    - '**/*'
-  base-directory: server
-  discard-paths: no
+# TO BE EDITED SOON
